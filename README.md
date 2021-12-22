@@ -1,5 +1,5 @@
-# Office-Addin-TaskPane-python
-Template to get start started writing a TaskPane Office Add-in using python for the backend
+# Outlook-Addin-TaskPane-python
+Template to get start started writing a TaskPane Outlook Add-in using python for the backend
 
 This template is a modified version of the office Addin taskpane JS repository here: https://github.com/OfficeDev/Office-Addin-TaskPane-JS with a combination of the python webapp repository from here: https://github.com/Azure-Samples/python-docs-hello-world.
 The html files are placed in the `Templates` folder while the assests pictures, javascript files, and css files are placed in the `static` folder. This is to help flask know where html, css, and javascript files would be.
