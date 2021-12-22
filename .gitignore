@@ -92,3 +92,12 @@ ENV/
 # Visual Studio Code
 .vscode/
 
+#azure information
+.azure
+
+#node modules
+static/node_modules
+
+#personal manifest files
+manifest_python_personal.xml
+manifest_python_SSO.xml
