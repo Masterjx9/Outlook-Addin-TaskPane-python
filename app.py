@@ -1,12 +1,15 @@
 from flask import Flask
 from flask import render_template
 from flask.helpers import send_file
+import os
+import dotenv
+from devcerts.install import ensure_certificates_are_installed 
+
+
+dotenv.load_dotenv()
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def hello():
-#     return "Hello, World!"
 
 @app.route("/")
 def index():
@@ -39,3 +42,21 @@ def icon128():
 @app.route("/assets/logo-filled.png")
 def iconlogofilled():
     return send_file("./static/assets/logo-filled.png",mimetype='image/png')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('./static/favicon.ico', mimetype='image/vnd.microsoft.icon')
+    
+if __name__ == "__main__":
+    if os.environ.get("APP_MODE") == "DEV":
+        print("Running in DEV mode")
+        # Call the function to ensure certificates are installed and valid
+        ensure_certificates_are_installed()
+
+        # Assuming the ensure_certificates_are_installed function updates the default paths as needed
+        from devcerts.defaults import localhost_certificate_path, localhost_key_path
+        ssl_context = (localhost_certificate_path, localhost_key_path)
+        
+        app.run(debug=True, ssl_context=ssl_context)
+    else:
+        app.run(debug=True)
