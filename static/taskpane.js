@@ -13,8 +13,16 @@ Office.onReady((info) => {
   }
 });
 
-export async function run() {
-  /**
-   * Insert your Outlook code here
-   */
+async function run() {
+  const bootstrapAlertDiv = document.getElementById("alert");
+  bootstrapAlertDiv.innerHTML = `
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      The Button works!!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+  
+  await new Promise(resolve => setTimeout(resolve, 4000));
+  bootstrapAlertDiv.innerHTML = "";
 }
+

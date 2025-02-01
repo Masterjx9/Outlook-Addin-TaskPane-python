@@ -12,9 +12,18 @@ The html files are placed in the `Templates` folder while the assests pictures, 
 ## Test webapp before deployment
 You can run flask locally for development
 1. [Download the zip](https://github.com/Masterjx9/Outlook-Addin-TaskPane-python/archive/refs/heads/master.zip) or use `git clone https://github.com/Masterjx9/Outlook-Addin-TaskPane-python.git` then go to the root of the folder and perform the following commands:
-```
+
+### For Windows
+```powershell
 py -3 -m venv .venv
 .venv\scripts\activate
+pip install -r requirements.txt
+```
+
+### For MacOS/Linux
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 

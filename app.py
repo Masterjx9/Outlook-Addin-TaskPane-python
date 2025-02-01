@@ -8,8 +8,7 @@ from devcerts.install import ensure_certificates_are_installed
 
 dotenv.load_dotenv()
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 @app.route("/")
 def index():

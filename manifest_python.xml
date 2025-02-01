@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>05c2e1c9-3e1d-406e-9a91-e9ac64854143</Id> 
-  <Version>1.0.0.1</Version>
+  <Version>1.0.0.2</Version>
   <ProviderName>PythonicIT</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="PythonicIT Template App"/>
@@ -97,7 +97,7 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:5000/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Contoso Add-in"/>
+        <bt:String id="GroupLabel" DefaultValue="PythonicIT Add-in"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
         <bt:String id="ActionButton.Label" DefaultValue="Perform an action"/>
       </bt:ShortStrings>
